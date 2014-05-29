@@ -31,7 +31,7 @@
 			// display featured image full
 			if ( has_post_thumbnail() && get_theme_mod( 'enterprise_feed_featured_image' ) == 1 ) : ?>
 				<a href="<?php the_permalink(); ?>" rel="bookmark">
-					<?php the_post_thumbnail( 'enterprise_feature_image', array( 'class' => 'featured-img' ) ); ?>
+					<?php the_post_thumbnail( 'enterprise_featured_image', array( 'class' => 'featured-img' ) ); ?>
 				</a>
 				<?php
 			endif;
