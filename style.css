@@ -1096,7 +1096,7 @@ object {
 /*--------------------------------------------------------------
 *** Responsive
 --------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
 	#page {
 		padding: 0 16px;
 		margin: 0;
