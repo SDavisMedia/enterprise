@@ -494,6 +494,12 @@ input[type="button"]:hover {
 	float: left;
 	margin-left: 20px;
 }
+.main-navigation .menu > .menu-item-has-children > a:after {
+	color: #999;
+	font-family: "FontAwesome";
+	content: "\f0d7";
+	margin-left: 8px;
+}
 .main-navigation a {
 	display: inline-block;
 	color: #404040;
@@ -1166,16 +1172,20 @@ object {
 		border: 1px solid #eee;
 		border-width: 0 0 1px;
 	}
+	.site-header .main-navigation ul ul a,
 	.site-header .main-navigation ul ul .highlight a:hover,
 	.site-header .main-navigation .menu > .highlight > a:hover {
 		color: #999;
+	}
+	.site-header .main-navigation ul ul a:hover,
+	.main-navigation .menu > .menu-item-has-children > a:after {
+		color: #404040;
 	}
 	.site-header .main-navigation .menu > .highlight > a:before,
 	.site-header .main-navigation ul ul .highlight a:before {
 		font-family: "FontAwesome";
 		content: "\f005";
 		margin-right: 8px;
-		margin-left: -22px;
 	}
 	.fb-widgets-2 .feature-box-widget-area,
 	.fb-widgets-3 .feature-box-widget-area {
