@@ -1119,6 +1119,12 @@ object {
 	.main-navigation {
 		position: static;
 	}
+	.main-navigation li {
+		float: left;
+	}
+	.main-navigation .menu > li {
+		float: none;
+	}
 	.main-navigation a {
 		display: block;
 		padding: 10px;
