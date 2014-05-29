@@ -492,15 +492,16 @@ input[type="button"]:hover {
 }
 .main-navigation .current-menu-item > a, 
 .main-navigation .current-menu-parent > a,
-.main-navigation a:hover {
+.main-navigation a:hover,
+.main-navigation .menu > .highlight > a:hover {
 	color: #999;
 }
 .main-navigation ul ul {
 	display: none;
 	float: left;
-	left: -4px;
+	left: -2px;
 	position: absolute;
-	top: 40px;
+	top: 39px;
 	z-index: 99999;
 	background: #fff;
 	border: 2px solid #eee;
@@ -522,13 +523,8 @@ input[type="button"]:hover {
 	margin: 0 -2px;
 	width: 154px;
 }
-.main-navigation ul ul li {
-}
-.main-navigation li:hover > a {
-}
-.main-navigation ul ul :hover > a {
-}
-.main-navigation ul ul a:hover {
+.main-navigation ul ul .highlight a:hover {
+	background: #404040;
 }
 .main-navigation ul li:hover > ul {
 	display: block;
@@ -1075,7 +1071,6 @@ object {
 .gallery-columns-9 .gallery-item {
 	max-width: 11.11%;
 }
-.gallery-caption {}
 
 /*--------------------------------------------------------------
 *** Responsive
@@ -1153,6 +1148,7 @@ object {
 		font-family: "FontAwesome";
 		content: "\f005";
 		margin-right: 8px;
+		margin-left: -22px;
 	}
 	.two-fb-widget .feature-box-widget-area,
 	.three-fb-widget .feature-box-widget-area {
