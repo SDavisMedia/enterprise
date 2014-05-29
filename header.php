@@ -40,16 +40,18 @@
 						<h1 class="site-description"><?php bloginfo( 'description' ); ?></h1>
 					<?php endif; ?>
 				</div>
-		
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<span class="menu-toggle"><i class="fa fa-bars"></i> <?php _e( 'Menu', 'enterprise' ); ?></span>
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'header',
-							'fallback_cb' => '__return_false'
-						) );
-					?>
-				</nav><!-- #site-navigation -->
+				
+				<?php if ( ! is_page_template( 'templates/landing-page.php' ) ) : ?>
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<span class="menu-toggle"><i class="fa fa-bars"></i> <?php _e( 'Menu', 'enterprise' ); ?></span>
+						<?php
+							wp_nav_menu( array(
+								'theme_location' => 'header',
+								'fallback_cb' => '__return_false'
+							) );
+						?>
+					</nav><!-- #site-navigation -->
+				<?php endif; ?>
 			</header><!-- #masthead -->
 		</div>
 	
