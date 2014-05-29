@@ -20,8 +20,10 @@
 					<span><?php echo get_theme_mod( 'enterprise_feature_box_toggle', __( 'Learn More', 'enterprise' ) ); ?><i class="fa fa-caret-down"></i></span>
 				</span>
 			<?php endif; ?>
-				<?php if ( enterprise_fb_widgets() ) : ?>
-					<div class="feature-box-hidden">
+			<?php if ( enterprise_fb_widgets() || 1 == get_theme_mod( 'enterprise_force_toggle' ) ) : ?>
+				<div class="feature-box-hidden">
+					<?php do_action( 'enterprise_feature_box_before_widgets' ); ?>
+					<div class="feature-box-widget-wrap clear">
 						<?php if ( is_active_sidebar( 'feature-box-1' ) ) : ?>
 							<div class="feature-box-widget-area fb-widget-1">
 								<?php dynamic_sidebar( 'feature-box-1' ); ?>
@@ -38,7 +40,9 @@
 							</div>
 						<?php endif; ?>
 					</div>
-				<?php endif; ?>
+					<?php do_action( 'enterprise_feature_box_after_widgets' ); ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
 <?php endif; ?>
