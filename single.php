@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'templates/content', 'single' ); ?>
 
-			<?php enterprise_post_nav(); ?>
+			<?php 'post' == get_post_type() ? enterprise_post_nav() : ''; ?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template

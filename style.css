@@ -720,22 +720,22 @@ input[type="button"]:hover {
 .entry-meta-feed .fa-link {
 	margin-left: 6px;
 }
-.single-post .post-author {
+.single .post-author {
 	display: block;
 	color: #999;
 	margin-bottom: 16px;
 }
-.single-post .post-author a {
+.single .post-author a {
 	text-decoration: none;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	font-weight: bold;
 }
-.single-post .post-author img {
+.single .post-author img {
 	border-radius: 50%;
 	margin-right: 5px;
 	vertical-align: middle;
 }
-.single-post .entry-meta {
+.single .entry-meta {
 	display: inline-block;
 	position: absolute;
 	right: 0;
@@ -744,14 +744,14 @@ input[type="button"]:hover {
 	font-size: 12px;
 	margin-bottom: 10px;
 }
-.single-post .entry-meta a {
+.single .entry-meta a {
 	color: #999;
 	text-decoration: none;
 }
-.single-post .entry-meta a:hover {
+.single .entry-meta a:hover {
 	text-decoration: underline;
 }
-.single-post .posted-on .fa,
+.single .posted-on .fa,
 .entry-meta-feed .posted-on .fa,
 .cat-links .fa,
 .tag-links .fa {

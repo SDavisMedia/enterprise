@@ -33,35 +33,37 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'enterprise' ) );
-
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'enterprise' ) );
-
-			if ( ! enterprise_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = '<i class="fa fa-tags"></i> %2$s';
+	<?php if ( 'post' == get_post_type() ) : ?>
+		<footer class="entry-footer">
+			<?php
+				/* translators: used between list items, there is a space after the comma */
+				$category_list = get_the_category_list( __( ', ', 'enterprise' ) );
+	
+				/* translators: used between list items, there is a space after the comma */
+				$tag_list = get_the_tag_list( '', __( ', ', 'enterprise' ) );
+	
+				if ( ! enterprise_categorized_blog() ) {
+					// This blog only has 1 category so we just need to worry about tags in the meta text
+					if ( '' != $tag_list ) {
+						$meta_text = '<i class="fa fa-tags"></i> %2$s';
+					} else {
+						$meta_text = '';
+					}
+	
 				} else {
-					$meta_text = '';
-				}
-
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( '<i class="fa fa-archive"></i> %1$s<br><i class="fa fa-tags"></i> %2$s', 'enterprise' );
-				} else {
-					$meta_text = __( '<i class="fa fa-archive"></i> %1$s', 'enterprise' );
-				}
-
-			} // end check for categories on this blog
-
-			printf( $meta_text, $category_list, $tag_list );
-		?>
-	</footer><!-- .entry-footer -->
+					// But this blog has loads of categories so we should probably display them here
+					if ( '' != $tag_list ) {
+						$meta_text = __( '<i class="fa fa-archive"></i> %1$s<br><i class="fa fa-tags"></i> %2$s', 'enterprise' );
+					} else {
+						$meta_text = __( '<i class="fa fa-archive"></i> %1$s', 'enterprise' );
+					}
+	
+				} // end check for categories on this blog
+	
+				printf( $meta_text, $category_list, $tag_list );
+			?>
+		</footer><!-- .entry-footer -->
+	<?php endif; ?>
 </article><!-- #post-## -->
 
 <?php // show post footer? theme customizer options ?>
