@@ -116,9 +116,9 @@ function enterprise_scripts() {
 	// main stylesheet
 	wp_enqueue_style( 'enterprise-style', get_stylesheet_uri() );
 	// Google fonts
-	wp_enqueue_style( 'google-fonts-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:700' );
+	wp_enqueue_style( 'enterprise-google-fonts-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:700' );
 	// Font Awesome
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/fonts/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'enterprise-font-awesome', get_template_directory_uri() . '/assets/fonts/font-awesome/css/font-awesome.min.css' );
 	// responsive navigation script
 	wp_enqueue_script( 'enterprise-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), THEME_VERSION, true );
 	// feature box toggle
