@@ -153,19 +153,6 @@ require get_template_directory() . '/inc/customizer.php';
 
 
 /**
- * Add .top class to the first post in a loop
- */
-function enterprise_first_post_class( $classes ) {
-	global $wp_query;
-	if ( 0 == $wp_query->current_post )
-		$classes[] = 'top';
-		
-	return $classes;
-}
-add_filter( 'post_class', 'enterprise_first_post_class' );
-
-
-/**
  * Replace excerpt ellipses with new ellipses and link to full article
  */
 function enterprise_excerpt_more( $more ) {
