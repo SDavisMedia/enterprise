@@ -22,7 +22,7 @@
 			<?php endif; ?>
 			<?php if ( enterprise_fb_widgets() || 1 == get_theme_mod( 'enterprise_force_toggle' ) ) : ?>
 				<div class="feature-box-hidden">
-					<?php do_action( 'enterprise_feature_box_before_widgets' ); ?>
+					<?php do_action( 'enterprise_feature_box_before_widgets' ); // hook for custom content above widgets ?>
 					<div class="feature-box-widget-wrap clear">
 						<?php if ( is_active_sidebar( 'feature-box-1' ) ) : ?>
 							<div class="feature-box-widget-area fb-widget-1">
@@ -40,7 +40,7 @@
 							</div>
 						<?php endif; ?>
 					</div>
-					<?php do_action( 'enterprise_feature_box_after_widgets' ); ?>
+					<?php do_action( 'enterprise_feature_box_after_widgets' ); // hook for custom content below widgets ?>
 				</div>
 			<?php endif; ?>
 		</div>
