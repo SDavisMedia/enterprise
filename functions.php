@@ -175,10 +175,10 @@ add_filter( 'excerpt_more', 'enterprise_excerpt_more' );
 
 
 /**
- * Only show regular posts in search results
+ * Only show regular posts in search results. Also account for the bbPress search form.
  */
 function enterprise_search_filter( $query ) {
-	if ( $query->is_search && ! is_admin() )
+	if ( $query->is_search && ! is_admin() && ( class_exists( 'bbPress' ) && ! is_bbpress() ) )
 		$query->set( 'post_type', 'post' );
 		
 	return $query;
