@@ -22,8 +22,9 @@
 				</a>
 				<?php
 			endif;
+			// output the excerpt
+			the_excerpt();
 		?>
-		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">			
