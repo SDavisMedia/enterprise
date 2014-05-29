@@ -226,7 +226,7 @@ function enterprise_customize_register( $wp_customize ) {
 		'label'		=> __( 'Feature Box Toggle Text', 'enterprise' ),
 		'section'	=> 'enterprise_feature_box',
 		'priority'	=> 40,
-		'description'		=> __( 'The toggle button will only appear if at least one widget has been placed in one of the Feature Box widget areas. To override, force the toggle button below.', 'enterprise' ),
+		'description'		=> __( 'The toggle button will only appear if at least one widget has been placed in one of the Feature Box widget areas. To override, check the "Force Toggle Button" option below.', 'enterprise' ),
 	) ) );
 	
 	// force toggle button
