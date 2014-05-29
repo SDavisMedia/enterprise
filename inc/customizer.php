@@ -554,7 +554,7 @@ function enterprise_customizer_head_styles() {
 			}
 		<?php endif; ?>
 		<?php if ( 1 == get_theme_mod( 'enterprise_center_hidden' ) ) : // center the feature box hidden widget area ?>
-			.feature-box-hidden {
+			.feature-box-widget-area {
 				text-align: center;
 			}
 		<?php endif; ?>
