@@ -83,7 +83,7 @@ function enterprise_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'enterprise_layout_design', array(
     	'title'       	=> __( 'Layout & Design', 'enterprise' ),
 		'description' 	=> __( 'Control the general column configuration and the primary design colors of your site.', 'enterprise' ),
-		'priority'   	=> 15,
+		'priority'   	=> 20,
 	) );
 	
 	// column configuration
@@ -180,7 +180,7 @@ function enterprise_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'enterprise_feature_box', array(
     	'title'       	=> __( 'Feature Box Options', 'enterprise' ),
 		'description' 	=> __( 'The Feature Box displays on the Front Page of your site which will be either a Static Front Page or the Blog Home.', 'enterprise' ),
-		'priority'   	=> 20,
+		'priority'   	=> 30,
 	) );
 	
 	// show feature box?
@@ -260,7 +260,7 @@ function enterprise_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'enterprise_content_section', array(
     	'title'       	=> __( 'Content Options', 'enterprise' ),
 		'description' 	=> __( 'Adjust the display of content on your website. All options have a default value that can be left as-is but you are free to customize.', 'enterprise' ),
-		'priority'   	=> 30,
+		'priority'   	=> 40,
 	) );
 	
 	// post content
@@ -341,7 +341,7 @@ function enterprise_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'enterprise_post_footer', array(
     	'title'       	=> __( 'Post Footer', 'enterprise' ),
 		'description' 	=> __( 'Use this section to build your post footer. To override this completely, choose not to display the post footer and use the templates/content-single.php template in a child theme.', 'enterprise' ),
-		'priority'   	=> 40,
+		'priority'   	=> 50,
 	) );
 	
 	// show single post footer?
