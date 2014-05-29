@@ -488,10 +488,10 @@ input[type="button"]:hover {
 	padding-left: 0;
 }
 .main-navigation li {
-	float: left;
 	position: relative;
 }
 .main-navigation .menu > li {
+	float: left;
 	margin-left: 20px;
 }
 .main-navigation a {
