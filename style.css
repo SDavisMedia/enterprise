@@ -650,15 +650,15 @@ input[type="button"]:hover {
 	display: inline-block;
 	margin-bottom: 30px;
 }
-.one-fb-widget .feature-box-widget-area {
+.fb-widgets-1 .feature-box-widget-area {
 	width: 100%;
 }
-.two-fb-widget .feature-box-widget-area {
+.fb-widgets-2 .feature-box-widget-area {
 	float: left;
 	margin-right: 4%;
 	width: 48%;
 }
-.three-fb-widget .feature-box-widget-area {
+.fb-widgets-3 .feature-box-widget-area {
 	float: left;
 	margin-right: 3%;
 	width: 31.33334%;
@@ -1177,8 +1177,8 @@ object {
 		margin-right: 8px;
 		margin-left: -22px;
 	}
-	.two-fb-widget .feature-box-widget-area,
-	.three-fb-widget .feature-box-widget-area {
+	.fb-widgets-2 .feature-box-widget-area,
+	.fb-widgets-3 .feature-box-widget-area {
 		float: none;
 		margin-right: 0;
 		width: 100%;

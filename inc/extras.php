@@ -31,17 +31,14 @@ function enterprise_body_classes( $classes ) {
 	endif;
 	
 	// Adds classes based on feature box widget configuration
-	if ( ( is_active_sidebar( 'feature-box-1' ) && !is_active_sidebar( 'feature-box-2' ) && !is_active_sidebar( 'feature-box-3' ) ) ||
-		( !is_active_sidebar( 'feature-box-1' ) && is_active_sidebar( 'feature-box-2' ) && !is_active_sidebar( 'feature-box-3' ) ) ||
-		( !is_active_sidebar( 'feature-box-1' ) && !is_active_sidebar( 'feature-box-2' ) && is_active_sidebar( 'feature-box-3' ) ) ) :
-		$classes[] = "one-fb-widget";
-	elseif ( (is_active_sidebar( 'feature-box-1' ) && is_active_sidebar( 'feature-box-2' ) && !is_active_sidebar( 'feature-box-3' ) ) ||
-		( is_active_sidebar( 'feature-box-1' ) && !is_active_sidebar( 'feature-box-2' ) && is_active_sidebar( 'feature-box-3' ) ) ||
-		( !is_active_sidebar( 'feature-box-1' ) && is_active_sidebar( 'feature-box-2' ) && is_active_sidebar( 'feature-box-3' ) ) ) :
-		$classes[] = "two-fb-widget";
-	elseif ( ( is_active_sidebar( 'feature-box-1' ) && is_active_sidebar( 'feature-box-2' ) && is_active_sidebar( 'feature-box-3' ) ) ) :
-		$classes[] = "three-fb-widget";
-	endif;
+	$count = 0;
+	$widget_areas = array( 'feature-box-1', 'feature-box-2', 'feature-box-3');
+	foreach ( $widget_areas as $widget ) {
+		if ( is_active_sidebar( $widget ) ) :
+			$count = $count + 1;
+		endif;
+	}
+	$classes[] = 'fb-widgets-' . $count;
 	
 	return $classes;
 }
