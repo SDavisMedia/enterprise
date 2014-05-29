@@ -47,7 +47,7 @@ function enterprise_customize_register( $wp_customize ) {
 	$wp_customize->get_section( 'title_tagline' )->title = __( 'Site Title (Logo) & Tagline', 'enterprise' );
 	$wp_customize->get_section( 'title_tagline' )->priority = 10;
 
-	//site title
+	// site title
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	$wp_customize->get_control( 'blogname' )->priority = 10;
 
@@ -60,7 +60,7 @@ function enterprise_customize_register( $wp_customize ) {
 		'priority'	=> 20
 	) ) );
 
-	// tagline
+	// site tagline
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';	
 	$wp_customize->get_control( 'blogdescription' )->priority = 30;
 	
@@ -553,7 +553,7 @@ function enterprise_customizer_head_styles() {
 				box-shadow: none;
 			}
 		<?php endif; ?>
-		<?php if ( 1 == get_theme_mod( 'enterprise_center_hidden' ) ) : // center the feature box hidden widget area ?>
+		<?php if ( 1 == get_theme_mod( 'enterprise_center_hidden' ) ) : // center the feature box hidden widgets ?>
 			.feature-box-widget-area {
 				text-align: center;
 			}
@@ -625,7 +625,9 @@ function enterprise_customizer_styles() { ?>
 		textarea, input, select, .customize-description { font-size: 12px !important; }
 		.customize-control-title { font-size: 13px !important; margin: 5px 0 3px !important; }
 		.customize-control label { font-size: 12px !important; }
-		.customize-control-text, #customize-control-background_image, #customize-control-enterprise_feature_box_toggle { margin-bottom: 15px; }
+		.customize-control-text,
+		#customize-control-background_image,
+		#customize-control-enterprise_feature_box_toggle { margin-bottom: 15px; }
 		.control-description { color: #999; font-style: italic; margin-bottom: 6px; }
 	</style>
 <?php }

@@ -52,7 +52,7 @@ get_header(); ?>
 							<?php endif; ?>
 						</div>
 						<?php					
-					elseif (is_category() ) : 
+					elseif ( is_category() ) : 
 						if ( ! empty( $term_description ) ) : // output category description if it exists ?>
 							<div class="taxonomy-description"><?php echo $term_description; ?></div>
 							<?php
