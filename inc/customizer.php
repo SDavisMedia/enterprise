@@ -376,7 +376,7 @@ function enterprise_customize_register( $wp_customize ) {
 		'label'			=> __( 'Post Footer Content', 'enterprise' ),
 		'section'		=> 'enterprise_post_footer',
 		'priority'		=> 30,
-		'description'	=> __( 'Allowed tags: <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>', 'enterprise' ),
+		'description'	=> __( 'Allowed tags:', 'enterprise' ) . ' <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>',
 	) ) );
 	
 	// post footer footer

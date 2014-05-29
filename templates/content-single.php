@@ -53,9 +53,9 @@
 				} else {
 					// But this blog has loads of categories so we should probably display them here
 					if ( '' != $tag_list ) {
-						$meta_text = __( '<i class="fa fa-archive"></i> %1$s<br><i class="fa fa-tags"></i> %2$s', 'enterprise' );
+						$meta_text = '<i class="fa fa-archive"></i> %1$s<br><i class="fa fa-tags"></i> %2$s';
 					} else {
-						$meta_text = __( '<i class="fa fa-archive"></i> %1$s', 'enterprise' );
+						$meta_text =  '<i class="fa fa-archive"></i> %1$s';
 					}
 	
 				} // end check for categories on this blog

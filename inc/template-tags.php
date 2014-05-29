@@ -21,11 +21,11 @@ function enterprise_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<i class="fa fa-caret-left"></i> Older posts', 'enterprise' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( '<i class="fa fa-caret-left"></i> ' . __( 'Older posts', 'enterprise' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <i class="fa fa-caret-right"></i>', 'enterprise' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'enterprise' ) . ' <i class="fa fa-caret-right"></i>' ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -182,7 +182,7 @@ function enterprise_comment_template( $comment, $args, $depth ) {
 						<?php 
 							comment_reply_link(
 								array_merge( $args, array(
-									'reply_text'	=> '<i class="fa fa-reply"></i> Reply',
+									'reply_text'	=> '<i class="fa fa-reply"></i> ' . __( 'Reply', 'enterprise' ),
 									'depth'			=> $depth, 
 									'max_depth'		=> $args['max_depth'],
 								) )
