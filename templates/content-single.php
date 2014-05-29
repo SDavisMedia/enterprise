@@ -65,7 +65,7 @@
 </article><!-- #post-## -->
 
 <?php // show post footer? theme customizer options ?>
-<?php if ( get_theme_mod( 'enterprise_show_post_footer' ) == 1 ) : ?>
+<?php if ( 1 == get_theme_mod( 'enterprise_show_post_footer' ) && 'post' == get_post_type() ) : ?>
 	<article class="single-post-footer clear">
 		<?php if ( '' != get_theme_mod( 'enterprise_post_footer_headline' ) ) : ?>
 			<header class="post-footer-header">
