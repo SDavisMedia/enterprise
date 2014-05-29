@@ -175,6 +175,7 @@ a:active {
 }
 a img {
 	border: 0;
+	vertical-align: text-bottom;
 }
 body,
 button,
