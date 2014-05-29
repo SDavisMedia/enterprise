@@ -49,7 +49,7 @@ function enterprise_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );	
 	// add a hard cropped (for uniformity) image size for the product grid
-	add_image_size( 'enterprise_feature_image', 738, 200, true );
+	add_image_size( 'enterprise_featured_image', 738, 200, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

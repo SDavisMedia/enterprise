@@ -15,7 +15,7 @@
 		<?php 
 			// display featured image?
 			if ( has_post_thumbnail() && get_theme_mod( 'enterprise_single_featured_image' ) == 1 ) :
-				the_post_thumbnail( 'enterprise_feature_image', array( 'class' => 'featured-img' ) );
+				the_post_thumbnail( 'enterprise_featured_image', array( 'class' => 'featured-img' ) );
 			endif;
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		?>
