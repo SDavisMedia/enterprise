@@ -439,14 +439,6 @@ function enterprise_sanitize_link_text( $input ) {
 
 
 /**
- * Sanitize integer input
- */
-function enterprise_sanitize_integer( $input ) {
-	return absint( $input );
-}
-
-
-/**
  * Sanitize textarea
  */
 function enterprise_sanitize_textarea( $input ) {
