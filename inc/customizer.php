@@ -323,15 +323,15 @@ function enterprise_customize_register( $wp_customize ) {
 	) );
 	
 	// credits & copyright
-	$wp_customize->add_setting( 'enterprise_credits_copyright', array( 
-		'default' => null,
-		'sanitize_callback' => 'enterprise_sanitize_link_text' 
+	$wp_customize->add_setting( 'enterprise_credits_copyright', array(
+		'default'			=> null,
+		'sanitize_callback'	=> 'enterprise_sanitize_textarea',
 	) );
-	$wp_customize->add_control( new Enterprise_WP_Customize_Text_Control( $wp_customize, 'enterprise_credits_copyright', array(
-		'label'		=> __( 'Footer Credits & Copyright', 'enterprise' ),
-		'section'	=> 'enterprise_content_section',
-		'priority'	=> 60,
-		'description'		=> __( 'The footer will display your tagline, site title, copyright, and year if you leave this empty. Anchor tags (links) are allowed here.', 'enterprise' ),
+	$wp_customize->add_control( new Enterprise_WP_Customize_Textarea_Control( $wp_customize, 'enterprise_credits_copyright', array(
+		'label'			=> __( 'Footer Credits & Copyright', 'enterprise' ),
+		'section'		=> 'enterprise_content_section',
+		'priority'		=> 60,
+		'description'	=> __( 'Displays tagline, site title, copyright, and year by default. Allowed tags: <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>', 'enterprise' ),
 	) ) );
 
 
