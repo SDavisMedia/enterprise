@@ -7,7 +7,7 @@
 function enterprise_customize_register( $wp_customize ) {
 
 	/** ===============
-	 * Extends CONTROLS class to add textarea with description
+	 * Extends controls class to add textarea with description
 	 */
 	class Enterprise_WP_Customize_Textarea_Control extends WP_Customize_Control {
 		public $type = 'textarea';
@@ -24,7 +24,7 @@ function enterprise_customize_register( $wp_customize ) {
 	}
 
 	/** ===============
-	 * Extends CONTROLS class to add descriptions to text input controls
+	 * Extends controls class to add descriptions to text input controls
 	 */
 	class Enterprise_WP_Customize_Text_Control extends WP_Customize_Control {
 		public $type = 'customtext';
@@ -38,6 +38,46 @@ function enterprise_customize_register( $wp_customize ) {
 		</label>
 		
 		<?php }
+	}
+
+	/** ===============
+	 * Extends controls class to add descriptions to color picker controls
+	 */
+	class Enterprise_WP_Customize_Color_Control extends WP_Customize_Control {
+		public $type = 'color';
+		public $description = '';
+		public $statuses;
+		public function __construct( $manager, $id, $args = array() ) {
+			$this->statuses = array( '' => __('Default') );
+			parent::__construct( $manager, $id, $args );
+		}
+		public function enqueue() {
+			wp_enqueue_script( 'wp-color-picker' );
+			wp_enqueue_style( 'wp-color-picker' );
+		}
+		public function to_json() {
+			parent::to_json();
+			$this->json['statuses'] = $this->statuses;
+		}
+		public function render_content() {
+			$this_default = $this->setting->default;
+			$default_attr = '';
+			if ( $this_default ) {
+				if ( false === strpos( $this_default, '#' ) )
+					$this_default = '#' . $this_default;
+				$default_attr = ' data-default-color="' . esc_attr( $this_default ) . '"';
+			}
+			// The input's value gets set by JS. Don't fill it.
+			?>
+			<label>
+				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<div class="control-description"><?php echo esc_html( $this->description ); ?></div>
+				<div class="customize-control-content">
+					<input class="color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e( 'Hex Value' ); ?>"<?php echo $default_attr; ?> />
+				</div>
+			</label>
+			<?php
+		}
 	}
 
 	/** ===============
@@ -107,10 +147,11 @@ function enterprise_customize_register( $wp_customize ) {
 		'type'			=> 'option', 
 		'capability'	=> 'edit_theme_options',
 	) );		
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'enterprise_design_color', array(
+	$wp_customize->add_control( new Enterprise_WP_Customize_Color_Control( $wp_customize, 'enterprise_design_color', array(
 		'label'		=> __( 'Primary Design Color', 'enterprise' ), 
 		'section'	=> 'enterprise_layout_design',
 		'priority'	=> 20,
+		'description' 	=> __( 'The primary design color is used for links, borders, buttons, and other design elements.', 'enterprise' ),
 	) ) );
 	
 	// design color	text
@@ -119,10 +160,11 @@ function enterprise_customize_register( $wp_customize ) {
 		'type'			=> 'option', 
 		'capability'	=> 'edit_theme_options',
 	) );		
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'enterprise_design_color_text', array(
+	$wp_customize->add_control( new Enterprise_WP_Customize_Color_Control( $wp_customize, 'enterprise_design_color_text', array(
 		'label'		=> __( 'Text Color for Designed Elements', 'enterprise' ), 
 		'section'	=> 'enterprise_layout_design',
 		'priority'	=> 30,
+		'description' 	=> __( 'When the above Primary Design Color is used as a background color, this color option is applied to the text that within that element.', 'enterprise' ),
 	) ) );
 	
 	/**
