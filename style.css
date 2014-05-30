@@ -12,7 +12,6 @@ Domain Path: /languages/
 Tags:
 
 This theme, like WordPress, is licensed under the GPL. Have fun.
-
 Enterprise is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 */
 
@@ -38,7 +37,7 @@ body {
 #page,
 .bypostauthor .comment-footer,
 .single-post-footer {
-	border-color: #2E9FEB;
+	border-color: #2e9feb;
 }
 a,
 .main-navigation .menu > .highlight > a,
@@ -49,12 +48,12 @@ a,
 .comment-full:hover > .reply > .comment-reply-link,
 .site-main .comment-navigation a:hover,
 .site-main .paging-navigation a:hover {
-	color: #2E9FEB;
+	color: #2e9feb;
 }
 @media screen and (max-width: 780px) {	
 	.site-header .main-navigation ul ul .highlight a,
 	.site-header .main-navigation .menu > .highlight > a {
-		color: #2E9FEB;
+		color: #2e9feb;
 	}
 }
 button,
@@ -69,7 +68,7 @@ input[type="button"]:hover,
 .main-navigation ul ul .highlight.current-menu-parent > a,
 .feature-box-toggle span,
 .widget_calendar table caption {
-	background: #2E9FEB;
+	background: #2e9feb;
 }
 button,
 input[type="submit"],
@@ -83,7 +82,7 @@ input[type="button"]:hover,
 .main-navigation ul ul .highlight.current-menu-parent > a,
 .feature-box-toggle span,
 .widget_calendar table caption {
-	color: #FFF;
+	color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -353,9 +352,9 @@ input[type="tel"],
 input[type="number"],
 textarea {
 	background: #eee;
+	padding: 8px;
 	border: none;
 	border-radius: 3px;
-	padding: 8px;
 }
 #secondary .widget input[type="text"],
 #secondary .widget input[type="email"],
@@ -499,13 +498,13 @@ input[type="button"]:hover {
 --------------------------------------------------------------*/
 .main-navigation {
 	position: absolute;
-	top: 43px;
-	right: 0;
+		top: 43px;
+		right: 0;
 }
 .main-navigation ul {
 	list-style: none;
-	margin: 0;
 	padding-left: 0;
+	margin: 0;
 }
 .main-navigation li {
 	position: relative;
@@ -538,9 +537,9 @@ input[type="button"]:hover {
 .main-navigation ul ul {
 	display: none;
 	float: left;
-	left: -2px;
 	position: absolute;
-	top: 39px;
+		top: 39px;
+		left: -2px;
 	z-index: 99999;
 	background: #fff;
 	border: 2px solid #eee;
@@ -570,7 +569,7 @@ input[type="button"]:hover {
 }
 .menu-toggle {
 	display: none;
-	color: #FFF;
+	color: #fff;
 	padding: 6px 12px;
 	border-radius: 3px;
 	cursor: pointer;
@@ -608,7 +607,7 @@ input[type="button"]:hover {
 }
 .site-main .post-navigation {
 	padding-bottom: 40px;
-	border-bottom: 4px solid #EEE;
+	border-bottom: 4px solid #eee;
 }
 .post-navigation .nav-previous {
 	margin-bottom: 8px;
@@ -625,9 +624,9 @@ input[type="button"]:hover {
 .feature-box {
 	background: #f5f5f5;
 	padding: 24px 40px 0;
-	margin: -4px -40px 0;
 	border: 4px solid #eee;
 	border-width: 4px 0;
+	margin: -4px -40px 0;
 }
 .feature-box-content {
 	color: #757575;
@@ -650,7 +649,7 @@ input[type="button"]:hover {
 }
 .feature-box-toggle span {
 	display: inline-block;
-	color: #FFF;
+	color: #fff;
 	padding: 6px 12px;
 	border-radius: 3px;
 }
@@ -713,13 +712,13 @@ input[type="button"]:hover {
 }
 .hentry {
 	padding-bottom: 24px;
-	margin: 0 0 56px;
 	border-bottom: 4px solid #eee;
+	margin: 0 0 56px;
 }
 .landing-page .hentry {
 	padding-bottom: 0;
-	margin: 0;
 	border-bottom: none;
+	margin: 0;
 }
 .single .hentry {
 	margin-bottom: 48px;
@@ -764,8 +763,8 @@ input[type="button"]:hover {
 .single .entry-meta {
 	display: inline-block;
 	position: absolute;
-	right: 0;
-	top: 14px;
+		top: 14px;
+		right: 0;
 	color: #999;
 	font-size: 12px;
 	margin-bottom: 10px;
@@ -878,11 +877,11 @@ input[type="button"]:hover {
 }
 .comment-footer {
 	position: relative;
-	margin-bottom: 16px;
-	background: #F5F5F5;
-	border-top: 4px solid #EEE;
+	background: #f5f5f5;
 	padding: 10px;
+	border-top: 4px solid #eee;
 	border-radius: 0 0 3px 3px;
+	margin-bottom: 16px;
 }
 .comment-author {
 	display: inline-block;
@@ -940,10 +939,10 @@ input[type="button"]:hover {
 	margin-top: 32px;
 }
 .no-comments {
-	background: #FFFFE2;
-	padding: 8px;
+	background: #ffffe2;
 	font-size: 11px;
 	text-align: center;
+	padding: 8px;
 }
 
 /*--------------------------------------------------------------
@@ -1058,10 +1057,10 @@ input[type="button"]:hover {
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
+	padding: 0;
 	border: none;
 	margin-bottom: 0;
 	margin-top: 0;
-	padding: 0;
 }
 embed,
 iframe,
@@ -1210,7 +1209,7 @@ object {
 	}
 	.menu > li > a,
 	.site-header .main-navigation .menu > .highlight > a {
-		background: #F5F5F5;
+		background: #fafafa;
 		border-top: 1px solid #eee;
 		margin-top: -1px;
 	}
