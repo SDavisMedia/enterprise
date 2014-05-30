@@ -45,7 +45,7 @@
 				if ( ! enterprise_categorized_blog() ) {
 					// This blog only has 1 category so we just need to worry about tags in the meta text
 					if ( '' != $tag_list ) {
-						$meta_text = '<i class="fa fa-tags"></i> %2$s';
+						$meta_text = '<span class="tag-links"><i class="fa fa-tags"></i> %2$s</span>';
 					} else {
 						$meta_text = '';
 					}
@@ -53,9 +53,9 @@
 				} else {
 					// But this blog has loads of categories so we should probably display them here
 					if ( '' != $tag_list ) {
-						$meta_text = '<i class="fa fa-archive"></i> %1$s<br><i class="fa fa-tags"></i> %2$s';
+						$meta_text = '<span class="cat-links"><i class="fa fa-archive"></i> %1$s</span><br><span class="tag-links"><i class="fa fa-tags"></i> %2$s</span>';
 					} else {
-						$meta_text =  '<i class="fa fa-archive"></i> %1$s';
+						$meta_text = '<span class="cat-links"><i class="fa fa-archive"></i> %1$s</span>';
 					}
 	
 				} // end check for categories on this blog

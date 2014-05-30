@@ -55,7 +55,7 @@
 				if ( $categories_list && enterprise_categorized_blog() ) :
 			?>
 			<span class="cat-links">
-				<?php printf( '<i class="fa fa-archive"></i>' . __( ' %1$s', 'enterprise' ), $categories_list ); ?>
+				<?php echo '<i class="fa fa-archive"></i>' . $categories_list; ?>
 			</span>
 			<?php endif; // End if categories ?>
 
@@ -64,8 +64,8 @@
 				$tags_list = get_the_tag_list( '', __( ', ', 'enterprise' ) );
 				if ( $tags_list ) :
 			?>
-			<span class="tags-links">
-				<?php printf( '<br><i class="fa fa-tags"></i>' . __( ' %1$s', 'enterprise' ), $tags_list ); ?>
+			<span class="tag-links">
+				<?php echo '<br><i class="fa fa-tags"></i>' . $tags_list; ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
