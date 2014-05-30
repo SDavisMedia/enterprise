@@ -565,6 +565,7 @@ function enterprise_customizer_head_styles() {
 			.main-navigation .menu > .highlight > a,
 			.main-navigation .menu > .highlight.current-menu-item > a,
 			.main-navigation .menu > .highlight > a:before,
+			.main-navigation ul ul li.highlight a,
 			.main-navigation ul ul .highlight a:before,
 			.comment-full:hover > .reply > .comment-reply-link,
 			.site-main .comment-navigation a:hover,
@@ -586,7 +587,14 @@ function enterprise_customizer_head_styles() {
 				background: <?php echo enterprise_sanitize_hex_color( $design_color ); ?>;
 			}
 		<?php endif; ?>
-		<?php if ( '#ffffff' != $design_color_text && '' != $design_color_text ) : // Is the design color text no longer the default? ?>
+		<?php
+			/** 
+			 * Is the design color text no longer the default? Even if it is,
+			 * reinforce the design color text if the the primary design color
+			 * has been changed.
+			 */
+			if ( ( '#ffffff' != $design_color_text && '' != $design_color_text ) || ( '#2e9feb' != $design_color && '' != $design_color ) ) :
+			?>
 			button,
 			input[type="submit"],
 			input[type="submit"]:hover,
@@ -594,12 +602,18 @@ function enterprise_customizer_head_styles() {
 			input[type="button"]:hover,
 			.more-link,
 			.menu-toggle,
-			.main-navigation ul ul .highlight a,
-			.main-navigation ul ul .highlight.current-menu-item a,
-			.main-navigation ul ul .highlight.current-menu-parent > a,
+			.site-header .main-navigation ul ul .highlight a,
+			.site-header .main-navigation ul ul .highlight.current-menu-item a,
+			.site-header .main-navigation ul ul .highlight.current-menu-parent > a,
 			.feature-box-toggle span,
 			.widget_calendar table caption {
 				color: <?php echo enterprise_sanitize_hex_color( $design_color_text ); ?>;
+			}
+			@media screen and (max-width: 780px) {				
+				.site-header .main-navigation ul ul .highlight a,
+				.site-header .main-navigation .menu > .highlight > a {
+					color: <?php echo enterprise_sanitize_hex_color( $design_color ); ?>;
+				}
 			}
 		<?php endif; ?>
 	</style>
