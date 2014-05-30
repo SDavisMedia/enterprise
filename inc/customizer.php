@@ -164,7 +164,7 @@ function enterprise_customize_register( $wp_customize ) {
 		'label'		=> __( 'Text Color for Designed Elements', 'enterprise' ), 
 		'section'	=> 'enterprise_layout_design',
 		'priority'	=> 30,
-		'description' 	=> __( 'When the above Primary Design Color is used as a background color, this color option is applied to the text that within that element.', 'enterprise' ),
+		'description' 	=> __( 'When the above Primary Design Color is used as a background color, this color option is applied to the text within that element.', 'enterprise' ),
 	) ) );
 	
 	/**
