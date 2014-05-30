@@ -230,7 +230,9 @@ h3, h4 {
 h5, h6 {
 	font-size: 14px;
 }
-p {
+p,
+.wp-audio-shortcode,
+.video-player {
 	margin-bottom: 24px;
 }
 b, strong {
