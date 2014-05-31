@@ -5,10 +5,10 @@
  * @package Enterprise
  */
 
-define( 'THEME_NAME', 'Enterprise' );
-define( 'THEME_AUTHOR', 'Sean Davis' );
-define( 'THEME_AUTHOR_URI', 'http://seandavis.co/' );
-define( 'THEME_VERSION', '1.0.0' );
+define( 'ENTERPRISE_NAME', 'Enterprise' );
+define( 'ENTERPRISE_AUTHOR', 'Sean Davis' );
+define( 'ENTERPRISE_AUTHOR_URI', 'http://seandavis.co/' );
+define( 'ENTERPRISE_VERSION', '1.0.0' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -120,15 +120,15 @@ function enterprise_scripts() {
 	// Font Awesome
 	wp_enqueue_style( 'enterprise-font-awesome', get_template_directory_uri() . '/assets/fonts/font-awesome/css/font-awesome.min.css' );
 	// responsive navigation script
-	wp_enqueue_script( 'enterprise-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), THEME_VERSION, true );
+	wp_enqueue_script( 'enterprise-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), ENTERPRISE_VERSION, true );
 	// feature box toggle
-	wp_enqueue_script( 'enterprise-feature-box', get_template_directory_uri() . '/assets/js/feature-box.js', array( 'jquery' ), THEME_VERSION, true );
+	wp_enqueue_script( 'enterprise-feature-box', get_template_directory_uri() . '/assets/js/feature-box.js', array( 'jquery' ), ENTERPRISE_VERSION, true );
 	// parallax background
 	if ( 1 == get_theme_mod( 'enterprise_parallax_bg' ) ) :
-		wp_enqueue_script( 'enterprise-parallax', get_template_directory_uri() . '/assets/js/parallax.js', array( 'jquery' ), THEME_VERSION, true );
+		wp_enqueue_script( 'enterprise-parallax', get_template_directory_uri() . '/assets/js/parallax.js', array( 'jquery' ), ENTERPRISE_VERSION, true );
 	endif;
 	// skip link script
-	wp_enqueue_script( 'enterprise-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), THEME_VERSION, true );
+	wp_enqueue_script( 'enterprise-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), ENTERPRISE_VERSION, true );
 	// comments reply support
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) :
 		wp_enqueue_script( 'comment-reply' );
