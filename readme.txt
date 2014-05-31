@@ -74,9 +74,10 @@ Enterprise is distributed under the terms of the GNU GPL
 Enterprise is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
 Font Awesome http://fortawesome.github.io/Font-Awesome/license/
-Font Awesome Licenses:	SIL Open Font License http://scripts.sil.org/OFL 
-						MIT License http://opensource.org/licenses/mit-license.html 
-						CC BY 3.0 License – http://creativecommons.org/licenses/by/3.0/
+Font Awesome Licenses:
+	SIL Open Font License http://scripts.sil.org/OFL 
+	MIT License http://opensource.org/licenses/mit-license.html 
+	CC BY 3.0 License – http://creativecommons.org/licenses/by/3.0/
 Copyright: Dave Gandy, http://fontawesome.io
 
 
