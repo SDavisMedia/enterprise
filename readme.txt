@@ -83,7 +83,6 @@ Copyright: Dave Gandy, http://fontawesome.io
 
 
 == Changelog ==
-* Added: full support for bbPress
 
 = 1.0.0 =
 * first stable version
