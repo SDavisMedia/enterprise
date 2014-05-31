@@ -151,6 +151,11 @@ require get_template_directory() . '/inc/extras.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+/**
+ * Updater class
+ */
+require get_template_directory() . '/inc/updater.php';
+
 
 /**
  * Replace excerpt ellipses with new ellipses and link to full article
