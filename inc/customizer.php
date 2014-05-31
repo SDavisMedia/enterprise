@@ -424,7 +424,7 @@ function enterprise_customize_register( $wp_customize ) {
 	// post footer footer
 	$wp_customize->add_setting( 'enterprise_post_footer_note', array( 
 		'default'			=> null,
-		'sanitize_callback'	=> 'enterprise_sanitize_text' 
+		'sanitize_callback'	=> 'enterprise_sanitize_link_text' 
 	) );
 	$wp_customize->add_control( 'enterprise_post_footer_note', array(
 		'label'		=> __( 'Post Footer Note', 'enterprise' ),
