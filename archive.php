@@ -52,16 +52,9 @@ get_header(); ?>
 							<?php endif; ?>
 						</div>
 						<?php					
-					elseif ( is_category() ) : 
-						if ( ! empty( $term_description ) ) : // output category description if it exists ?>
+					elseif ( is_category() || is_tag() && ! empty( $tag_description ) ) : ?>
 							<div class="taxonomy-description"><?php echo $term_description; ?></div>
 							<?php
-						endif;
-					elseif ( is_tag() ) :
-						if ( ! empty( $tag_description ) ) : // output tag description if it exists ?>
-							<div class="taxonomy-description"><?php echo $tag_description; ?></div>
-							<?php
-						endif;
 					endif;
 				?>
 			</header><!-- .page-header -->
