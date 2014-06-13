@@ -160,18 +160,18 @@ function enterprise_comment_template( $comment, $args, $depth ) {
 							</div>
 						</div>
 						<?php
-							if ( $comment->comment_approved == '0' ) : ?>
+							if ( '0' == $comment->comment_approved ) : ?>
 								<em><?php _e( 'Your comment is awaiting moderation.', 'enterprise' ); ?></em><br /> 
 								<?php
 							endif;
 						?>
 						<div class="comment-meta commentmetadata">
-							<cite class="fn"><?php echo __( 'by ', 'enterprise' ) . get_comment_author_link(); ?></cite>
+							<cite class="fn"><?php printf(__( 'by %s', 'enterprise' ), get_comment_author_link() ); ?></cite>
 							<span class="comment-date">
 								<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 									<time pubdate datetime="<?php comment_time( 'c' ); ?>"><?php echo get_comment_date(); // translators: 1: date, 2: time ?></time>
 								</a>
-								<?php edit_comment_link( __( ' (Edit) ', 'enterprise' ) ); ?>
+								<?php edit_comment_link( __( '(Edit)', 'enterprise' ), ' ', ' ' ); ?>
 							</span>
 						</div>
 					</footer>
