@@ -172,7 +172,7 @@ $edd_updater = new ENTERPRISE_SL_Theme_Updater( array(
 ***********************************************/
 
 function enterprise_license_menu() {
-	add_theme_page( ENTERPRISE_NAME, ENTERPRISE_NAME, 'manage_options', 'enterprise-license', 'enterprise_license_page' );
+	add_theme_page( ENTERPRISE_NAME, ENTERPRISE_NAME, 'edit_theme_options', 'enterprise-license', 'enterprise_license_page' );
 }
 add_action( 'admin_menu', 'enterprise_license_menu' );
 
