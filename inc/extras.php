@@ -17,19 +17,19 @@ function enterprise_body_classes( $classes ) {
 	if ( is_multi_author() ) :
 		$classes[] = 'group-blog';
 	endif;
-	
+
 	// Adds body class based on page template
-	if ( is_page_template( 'templates/full-width.php' ) ) :		
+	if ( is_page_template( 'templates/full-width.php' ) ) :
 		$classes[] = 'full-width';
-	elseif ( is_page_template( 'templates/landing-page.php' ) ) :		
+	elseif ( is_page_template( 'templates/landing-page.php' ) ) :
 		$classes[] = 'landing-page';
 	endif;
-	
+
 	// Adds body class based on column configuration
 	if ( 'cs' == get_theme_mod( 'enterprise_columns_layout' ) ) :
 		$classes[] = 'content-sidebar';
 	endif;
-	
+
 	// Adds classes based on feature box widget configuration
 	$count = 0;
 	$widget_areas = array( 'feature-box-1', 'feature-box-2', 'feature-box-3');
@@ -39,42 +39,25 @@ function enterprise_body_classes( $classes ) {
 		endif;
 	}
 	$classes[] = 'fb-widgets-' . $count;
-	
+
 	return $classes;
 }
 add_filter( 'body_class', 'enterprise_body_classes' );
 
 /**
- * Filters wp_title to print a neat <title> tag based on what is being viewed.
+ * Render document title for backwards compatibility
  *
- * @param string $title Default title text for current view.
- * @param string $sep Optional separator.
- * @return string The filtered title.
+ * @resource https://make.wordpress.org/core/2015/10/20/document-title-in-4-4/
+ * @since 1.0.1
  */
-function enterprise_wp_title( $title, $sep ) {
-	if ( is_feed() ) {
-		return $title;
+if ( ! function_exists( '_wp_render_title_tag' ) ) {
+	function enterprise_render_title() {
+		?>
+		<title><?php wp_title( '|', true, 'right' ); ?></title>
+		<?php
 	}
-
-	global $page, $paged;
-
-	// Add the blog name
-	$title .= get_bloginfo( 'name', 'display' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) ) {
-		$title .= " $sep $site_description";
-	}
-
-	// Add a page number if necessary:
-	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
-	}
-
-	return $title;
+	add_action( 'wp_head', 'enterprise_render_title' );
 }
-add_filter( 'wp_title', 'enterprise_wp_title', 10, 2 );
 
 /**
  * Sets the authordata global when viewing an author archive.
